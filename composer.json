@@ -1,0 +1,14 @@
+{
+  "name": "phpbergen/202402",
+  "description": "Get started with Unit tests",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Phpbergen\\": "src"
+    }
+  },
+  "require": {
+    "ext-pdo": "*"
+  }
+}
