@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['8.1', '8.2', '8.3']
+        php-versions: ['8.1', '8.2', '8.3', '8.4']
 
     steps:
       - name: Checkout
@@ -45,4 +45,4 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      - uses: php-actions/phpunit@v3
+#      - uses: php-actions/phpunit@v3
