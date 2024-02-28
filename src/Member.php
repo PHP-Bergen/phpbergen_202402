@@ -6,14 +6,11 @@ class Member
 {
 
     public function createMember(
-      $firstName,
-      $middleName,
-      $lastName,
-      $email,
+      string $firstName,
+      string $middleName,
+      string $lastName,
+      Email $email,
     ): void {
-        if (!is_string($firstName)) {
-            throw new \InvalidArgumentException('First name must a string');
-      }
         if (strlen($firstName) < 3) {
             return;
         }
