@@ -27,6 +27,9 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           tools: composer
 
+      - name: Check PHP version
+        run: php -v
+
       - name: Validate composer.json and composer.lock
         run: composer validate --strict
 
