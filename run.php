@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use Phpbergen\Sqlite;
-use Phpbergen\Member;
+namespace Phpbergen;
 
 /**
  * Setup app.
@@ -15,6 +14,7 @@ $database = new Sqlite();
 $database->init();
 
 // Do something useful.
+$email = Email::fromString('steinmb@phpberge.no');
 $member = new Member();
-$member->createMember('Stein', 'Magne', 'Bjørklund', 'steinmb@proton.me');
+$member->createMember('Stein', 'Magne', 'Bjørklund', $email);
 echo $member->newestMember() . PHP_EOL;

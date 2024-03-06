@@ -24,7 +24,7 @@ class Member
         );
         $statement->execute([
           'name' => $fullName,
-          'email' => $email,
+          'email' => $email->asString(),
         ]);
     }
 
