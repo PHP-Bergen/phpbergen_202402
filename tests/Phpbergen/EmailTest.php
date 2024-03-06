@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Phpbergen;
 
 use InvalidArgumentException;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \Phpbergen\Email
- */
+#[CoversClass(Email::class)]
 class EmailTest extends TestCase
 {
     private string $invalidEmail;
