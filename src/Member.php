@@ -6,16 +6,9 @@ class Member
 {
 
     public function createMember(
-      string $firstName,
-      string $middleName,
-      string $lastName,
+      Name $name,
       Email $email,
     ): void {
-        if (strlen($firstName) < 3) {
-            return;
-        }
-
-        $fullName = "$firstName $middleName $lastName";
         $database = new Sqlite();
         $statement = $database->db_connection->prepare(
           "INSERT INTO customer('name', 'email') 
@@ -23,7 +16,7 @@ class Member
                         (:name, :email)"
         );
         $statement->execute([
-          'name' => $fullName,
+          'name' => $name->getName(),
           'email' => $email->asString(),
         ]);
     }

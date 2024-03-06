@@ -15,6 +15,7 @@ $database->init();
 
 // Do something useful.
 $email = Email::fromString('steinmb@phpberge.no');
+$person = new Name('Stein', 'Magne', 'Bjørklund');
 $member = new Member();
-$member->createMember('Stein', 'Magne', 'Bjørklund', $email);
+$member->createMember($person, $email);
 echo $member->newestMember() . PHP_EOL;
