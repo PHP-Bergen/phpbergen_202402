@@ -3,3 +3,4 @@
 .phpunit.cache
 /demo/.idea
 /demo/vendor
+.DS_Store
