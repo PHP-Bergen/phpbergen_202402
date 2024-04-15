@@ -1,4 +1,7 @@
-# PHP Bergen 2024 How to get started with PHPUnit testing in PHP
+# PHP Bergen 2024 - How to get started with PHPUnit testing in PHP
+
+* Slides located in `/docs`
+* HTML slides: https://php-bergen.github.io/phpbergen_202402/
 
 ## demo application
 
