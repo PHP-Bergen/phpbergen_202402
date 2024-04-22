@@ -44,6 +44,9 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      - uses: php-actions/phpunit@v3
+      - name: PHPUnit tests
+        shell: cmd
+        run: echo %PATH%
+        uses: php-actions/phpunit@v3
         with:
-          configuration: "./phpunit.xml"
+          configuration: "/phpunit.xml"
