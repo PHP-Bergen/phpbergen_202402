@@ -46,7 +46,7 @@ jobs:
 
       - name: Get path
         shell: bash
-        run: echo $PATH
+        run: pwd
 
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
