@@ -44,9 +44,9 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      - name: get path
-        shell: cmd
-        run: echo %PATH%
+      - name: Get path
+        shell: bash
+        run: echo $PATH
 
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
